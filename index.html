@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Animated Background -->
+<div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">⚡ Energy Club</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="core.html">Core Members</a></li>
+        <li><a href="career.html">Career</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-left">
+        <img src="logo.png" class="club-logo">
+
+        <h1 class="main-heading">WELCOME TO ENERGY CLUB</h1>
+        <p class="sub-heading">
+            Empowering innovation, sustainability & renewable energy awareness.
+        </p>
+
+        <a href="about.html" class="btn">Explore More</a>
+
+        <p class="custom-link">
+            <a href="#">Add Your Custom Link Here</a>
+        </p>
+    </div>
+
+    <!-- News Panel -->
+    <div class="news-panel">
+        <h2>Latest Updates</h2>
+        <div class="news-item">
+            <a href="events.html">⚡ RBI Fort Audit (Jan 2026)</a>
+        </div>
+        <div class="news-item">
+            <a href="events.html">🌍 Hydrogen Tech Seminar Recap</a>
+        </div>
+        <div class="news-item">
+            <a href="events.html">☀️ Solar Workshop Success (Feb 2025)</a>
+        </div>
+    </div>
+</section>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h3>New Event Alert</h3>
+        <p>Join our upcoming Renewable Energy Innovation Camp!</p>
+        <a href="events.html" class="btn">View Details</a>
+    </div>
+</div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+}
+
+window.onload = function () {
+    setTimeout(() => {
+        document.getElementById("popup").classList.add("show");
+    }, 1200);
+};
+
+function closePopup() {
+    document.getElementById("popup").classList.remove("show");
+}
+</script>
+
+</body>
+</html>

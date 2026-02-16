@@ -1,77 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Energy Club - Events</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<!-- Navigation -->
 
-<nav>
+<body>
+
+<!-- Animated Background -->
+<div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar">
     <div class="logo">⚡ Energy Club</div>
-    <ul id="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="nav-links" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="quiz.html">Quiz</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="join.html">Join</a></li>
         <li><a href="core.html">Core Members</a></li>
-        <li><a href="career.html">career </a></li>
-
+        <li><a href="career.html">Career</a></li>
     </ul>
 </nav>
 
-<h1>Upcoming & Recent Events</h1>
-<p><strong>On-Grid Solar Workshop:</strong> A hands-on technical session held in February 2025.</p>
+<!-- Page Content -->
+<section class="page-section">
+    <h1>Upcoming & Recent Events</h1>
 
-<h1>Upcoming Events</h1>
-<p>Details about upcoming energy events 1.</p>
-<!-- Hyperlink Space -->
-<p><a href="#">Add Event Registration Link Here</a></p>
+    <div class="event-card">
+        <h3>On-Grid Solar Workshop</h3>
+        <p>A hands-on technical session held in February 2025.</p>
+    </div>
 
-<p>Details about upcoming energy events 2.</p>
-<!-- Hyperlink Space -->
-<p><a href="#">Add Event Registration Link Here</a></p>
+    <h2>Upcoming Events</h2>
 
-<h1>Past Events</h1>
-<p>Details about past energy events 2.</p>
-<!-- Hyperlink Space -->
-<p><a href="#">Add Event Registration Link Here</a></p>
+    <div class="event-card">
+        <p>Details about upcoming energy event 1.</p>
+        <a href="#">Add Event Registration Link</a>
+    </div>
 
-</body> <!-- Animated Particles Background -->
-<div class="particles">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-</div>
+    <div class="event-card">
+        <p>Details about upcoming energy event 2.</p>
+        <a href="#">Add Event Registration Link</a>
+    </div>
 
-<h1>Past Seminars</h1>
-<ul>
-    <li><strong>Advanced Hydrogen Technology:</strong> (March & July 2025)</li>
-    <li><strong>Energy Audits and Managers Seminar:</strong> Focused on professional certification and methodology.</li>
-</ul>
+    <h2>Past Seminars</h2>
+    <ul>
+        <li><strong>Advanced Hydrogen Technology:</strong> March & July 2025</li>
+        <li><strong>Energy Audits & Managers Seminar:</strong> Professional certification focus</li>
+    </ul>
 
-<h1>Past Energy Audits</h1>
-<p>Our members have conducted professional-grade audits at prestigious locations:</p>
-<ul>
-    <li>Reserve Bank of India (Fort) - Jan 2026</li>
-    <li>Railway hospital </li>
-    <li> Pidilite Industries Ltd</li>
-    <li>Grand Hyatt Santacruz - March 2025</li>
-    <li>Godrej BKC - Feb 2025</li>
-    <li>Bidhata Industries Pvt Ltd, Badlapur - Jan 2025</li>
-    <li>Reserve Bank of India (Fort) - Jan 2026</li>
-    <li>Railway hospital </li>
-    <li> Pidilite Industries Ltd</li>
-    <li>Grand Hyatt Santacruz - March 2025</li>
-    <li>Godrej BKC - Feb 2025</li>
-    <li>Bidhata Industries Pvt Ltd, Badlapur - Jan 2025</li>   <li>Reserve Bank of India (Fort) - Jan 2026</li>
-    <li>Railway hospital </li>
-    <li> Pidilite Industries Ltd</li>
-    <li>Grand Hyatt Santacruz - March 2025</li>
-    <li>Godrej BKC - Feb 2025</li>
-    <li>Bidhata Industries Pvt Ltd, Badlapur - Jan 2025</li>
+    <h2>Past Energy Audits</h2>
+    <ul>
+        <li>Reserve Bank of India (Fort) – Jan 2026</li>
+        <li>Railway Hospital</li>
+        <li>Pidilite Industries Ltd</li>
+        <li>Grand Hyatt Santacruz – March 2025</li>
+        <li>Godrej BKC – Feb 2025</li>
+        <li>Bidhata Industries Pvt Ltd, Badlapur – Jan 2025</li>
+    </ul>
 
-</ul>
+</section>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("active");
+}
+</script>
+
+</body>
 </html>

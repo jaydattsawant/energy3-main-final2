@@ -10,10 +10,10 @@ body{
     background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
     color:white;
     overflow-x:hidden;
+    padding-top:80px;   /* Prevent content hiding behind fixed navbar */
 }
 
-/* ================= BACKGROUND LAYER FIX ================= */
-/* (Safe for particles / electric canvas if used) */
+/* ================= BACKGROUND LAYER ================= */
 .particles,
 #particles-js,
 #electricCanvas{
@@ -26,12 +26,6 @@ body{
     pointer-events:none;
 }
 
-/* All main content above background */
-body > *:not(.particles):not(#particles-js):not(#electricCanvas){
-    position:relative;
-    z-index:5;
-}
-
 /* ================= NAVIGATION ================= */
 
 nav{
@@ -41,9 +35,11 @@ nav{
     padding:15px 8%;
     background:rgba(0,0,0,0.6);
     backdrop-filter:blur(10px);
-    position:sticky;
+    position:fixed;
     top:0;
-    z-index:50;
+    left:0;
+    width:100%;
+    z-index:1000;
 }
 
 .logo{
@@ -160,7 +156,7 @@ nav ul li a:hover{
     opacity:0;
     visibility:hidden;
     transition:0.5s;
-    z-index:100;
+    z-index:2000;
 }
 
 .popup-overlay.show{
@@ -176,6 +172,7 @@ nav ul li a:hover{
     text-align:center;
     transform:scale(0.5);
     transition:0.4s;
+    position:relative;
 }
 
 .popup-overlay.show .popup-box{
@@ -213,7 +210,7 @@ nav ul li a:hover{
     nav ul{
         flex-direction:column;
         position:absolute;
-        top:60px;
+        top:70px;
         right:0;
         background:rgba(0,0,0,0.95);
         width:220px;
@@ -221,6 +218,7 @@ nav ul li a:hover{
         padding:20px;
         border-radius:0 0 0 15px;
         box-shadow:0 0 20px rgba(0,245,212,0.4);
+        z-index:1500;
     }
 
     nav ul.active{
